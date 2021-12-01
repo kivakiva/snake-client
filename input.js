@@ -18,6 +18,15 @@ const handleUserInput = function (key) {
   if (key === '\u0061') {
     connection.write("Move: left")
   }
+  if (key === 'i') {
+    connection.write("Say: can you help me?")
+  }
+  if (key === 'o') {
+    connection.write("Say: i need 2 find my son")
+  }
+  if (key === 'p') {
+    connection.write("Say: his name is nemo")
+  }
 };
 
 
