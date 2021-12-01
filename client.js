@@ -18,6 +18,14 @@ const connect = function () {
   conn.on('connect', () => {
     console.log("Successfully connected to game server");
     conn.write('Name: AAA')
+    const direction = ['up', 'down', 'left', 'right']
+    function getRandomArbitrary(min, max) {
+      return Math.floor(Math.random() * (max - min) + min);
+    }
+    setInterval(() => {
+      const random = getRandomArbitrary(0, 4)
+      conn.write(`Move: ${direction[random]}`)
+    }, 200); 
   })
   return conn;
 };
